@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Notas</title>
+    <link rel="stylesheet" href="/static/css/estilos.css">
+</head>
+<body>
+
+<h1>Formulario de Notas</h1>
+
+<a href="/">volver al menu</a>
+<br><br>
+
+<form method="POST" action="/ejercicio2">
+    <label>Nombre 1:</label><br>
+    <input type="text" name="nombre1"><br><br>
+
+    <label>Nombre 2:</label><br>
+    <input type="text" name="nombre2"><br><br>
+
+    <label>Nombre 3:</label><br>
+    <input type="text" name="nombre3"><br><br>
+
+    <input type="submit" value="Enviar" class="boton-enviar">
+</form>
+
+{% if nombre_largo != None %}
+<br>
+<p>El nombre mas largo es: {{ nombre_largo }}</p>
+<p>Tiene {{ cantidad }} caracteres</p>
+{% endif %}
+
+</body>
+</html>
